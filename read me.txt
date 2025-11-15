@@ -1,0 +1,13 @@
+cd /Users/jianwei/Downloads/cane
+clang++ -std=c++17 \
+  cane.cpp RtAudio.cpp -o cane_app \
+  -D__MACOSX_CORE__ -D__APPLE__ \
+  -framework CoreAudio -framework AudioToolbox -framework AudioUnit \
+  -framework CoreFoundation \
+  -I/opt/homebrew/include -L/opt/homebrew/lib \
+  -lserialport -lpthread
+
+
+
+
+./cane_app
